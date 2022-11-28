@@ -1,4 +1,4 @@
-# 🎉 Docker PHP IPAM
+# 🎉 Docker phpIPAM
 
 phpipam is an open-source web IP address management application (IPAM). Its goal is to provide light, modern and useful IP address management.
 
