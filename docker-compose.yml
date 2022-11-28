@@ -1,0 +1,38 @@
+version: '3.9'
+services:
+  ipam-database:
+    image: mrlesmithjr/mysql:latest
+    container_name: ipam-database
+    restart: always
+    volumes:
+      - "data:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: phpipam
+      MYSQL_DATABASE: phpipam
+      MYSQL_USER: phpipam
+      MYSQL_PASSWORD: phpipam
+
+  web:
+    image: mrlesmithjr/docker-phpipam:latest
+    container_name: ipam-web
+    restart: always
+    depends_on:
+      - ipam-database
+    links:
+      - ipam-database
+    ports:
+      - "8010:80"
+    environment:
+      MYSQL_DB_HOSTNAME: ipam-database
+      MYSQL_DB_USERNAME: phpipam
+      MYSQL_DB_PASSWORD: phpipam
+      MYSQL_DB_NAME: phpipam
+      MYSQL_DB_PORT: 3306
+
+networks:
+  default:
+    driver: bridge
+
+volumes:
+  data:
+    driver: local
