@@ -8,7 +8,7 @@ phpipam is an open-source web IP address management application (IPAM). Its goal
 
 ### 🥈 Run
 
-- [http://localhost:8001/](http://localhost:8001/) username : `admin` password : `admin`
+- [http://localhost:8010/](http://localhost:8010/) username : `admin` password : `admin`
 
 ```shell
 docker-compose up -d
