@@ -4,6 +4,8 @@ services:
     image: mrlesmithjr/mysql:latest
     container_name: ipam-database
     restart: always
+    ports:
+      - "3306:3306"
     volumes:
       - "data:/var/lib/mysql"
     environment:
@@ -22,6 +24,7 @@ services:
       - ipam-database
     ports:
       - "8010:80"
+      - "8011:443"
     environment:
       MYSQL_DB_HOSTNAME: ipam-database
       MYSQL_DB_USERNAME: phpipam
