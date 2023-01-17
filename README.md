@@ -1,6 +1,6 @@
 # 🎉 Docker phpIPAM
 
-phpipam is an open-source web IP address management application (IPAM). Its goal is to provide light, modern and useful IP address management.
+phpIPAM is an open-source IPAM software that facilitates IP address and network management through a web-based interface, it offers features such as IP tracking, subnet management, access control.
 
 ![version](https://img.shields.io/badge/version-1.0-blue)
 ![rating](https://img.shields.io/badge/rating-★★★★★-yellow)
