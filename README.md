@@ -8,7 +8,7 @@ phpIPAM is an open-source IPAM software that facilitates IP address and network 
 
 ### 🥈 Run
 
-- [http://localhost:8010/](http://localhost:8010/) username : `admin` password : `admin`
+- [http://localhost:80/](http://localhost:80/) username : `admin` password : `admin`
 
 ```shell
 docker-compose up -d
