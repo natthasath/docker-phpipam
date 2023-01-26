@@ -5,11 +5,11 @@ services:
     container_name: ipam-database
     restart: always
     ports:
-      - "3306:3306"
+      - ${DB_PORT}:3306
     volumes:
       - data:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_ROOT_PASSWORD=${DB_PASS}
 
   ipam:
     image: pierrecdn/phpipam
@@ -18,11 +18,11 @@ services:
     depends_on:
       - mysql
     ports:
-      - "8010:80"
-      - "8011:443"
+      - ${HTTP_PORT}:80
+      - ${HTTPS_PORT}:443
     environment:
-      - MYSQL_ENV_MYSQL_USER=root
-      - MYSQL_ENV_MYSQL_ROOT_PASSWORD=admin
+      - MYSQL_ENV_MYSQL_USER=${DB_USER}
+      - MYSQL_ENV_MYSQL_ROOT_PASSWORD=${DB_PASS}
       - MYSQL_ENV_MYSQL_HOST=mysql
 
 networks:
