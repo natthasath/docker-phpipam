@@ -6,7 +6,7 @@ phpIPAM is an open-source IPAM software that facilitates IP address and network 
 ![rating](https://img.shields.io/badge/rating-★★★★★-yellow)
 ![uptime](https://img.shields.io/badge/uptime-100%25-brightgreen)
 
-### 🥈 Run
+### 🏆 Run
 
 - [http://localhost:80/](http://localhost:80/) username : `admin` password : `admin`
 
