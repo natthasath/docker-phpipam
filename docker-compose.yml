@@ -27,8 +27,10 @@ services:
 
 networks:
   default:
+    name: docker_phpipam_network
     driver: bridge
 
 volumes:
   data:
+    name: docker_phpipam_data
     driver: local
